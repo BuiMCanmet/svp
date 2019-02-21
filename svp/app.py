@@ -27,7 +27,7 @@ import multiprocessing
 import importlib
 import datetime
 import copy
-import imp
+#import imp
 
 import time
 import xml.etree.ElementTree as ET
@@ -63,6 +63,7 @@ def script_update(path, old_name, new_name):
                 pass
     except Exception as e:
         raise SVPError('Error on script update - directory %s: %s' % (path, str(e)))
+
 
 SUITE_EXT = '.ste'
 TEST_EXT = '.tst'
@@ -432,6 +433,7 @@ RUN_MSG_CMD = 'cmd'
 RUN_MSG_CMD_PAUSE = 'pause'
 RUN_MSG_CMD_RESUME = 'resume'
 RUN_MSG_CMD_STOP = 'stop'
+
 
 class RunScript(script.Script):
     def __init__(self, env=None, info=None, config=None, config_file=None, params=None, conn=None):
